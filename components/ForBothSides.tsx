@@ -2,15 +2,14 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { HardHat, Building2, Check, IndianRupee } from "lucide-react";
+import { HardHat, Building2, Check } from "lucide-react";
 
 const workerBenefits = [
   "Verified skill profile visible to clients near you",
   "Listed based on reviews & background experience",
   "Direct chat — no agency commission on your earnings",
   "Set your own rates and availability",
-  "Daily or monthly access — your choice",
-  "One hire often covers your entire month's plan",
+  "Get discovered by clients actively looking for your skill",
 ];
 
 const employerBenefits = [
@@ -89,34 +88,11 @@ export default function ForBothSides() {
                 <br />
                 <span className="text-brand-teal">your future.</span>
               </h3>
-              <p className="text-sm text-white/50 mb-6 leading-relaxed">
-                Pay a small daily or monthly fee to enter the marketplace —
-                get listed in front of clients actively looking for your skill,
-                right in your area. One hire and your fee pays for itself many
-                times over.
+              <p className="text-sm text-white/50 mb-8 leading-relaxed">
+                Build a capability profile that shows what you can actually do.
+                Get discovered by clients near you based on real skills — not
+                degrees, not connections, not luck.
               </p>
-
-              {/* Pricing callout */}
-              <div
-                className="rounded-2xl p-4 mb-7 flex items-center gap-4"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(30,202,184,0.12) 0%, rgba(37,99,235,0.07) 100%)",
-                  border: "1px solid rgba(30,202,184,0.25)",
-                }}
-              >
-                <div className="w-10 h-10 rounded-xl bg-brand-teal/20 flex items-center justify-center flex-shrink-0">
-                  <IndianRupee size={18} className="text-brand-teal" aria-hidden="true" />
-                </div>
-                <div>
-                  <p className="text-white font-display font-bold text-sm">
-                    ₹20/day &nbsp;·&nbsp; ₹300/month
-                  </p>
-                  <p className="text-white/45 text-xs mt-0.5">
-                    Get hired 3–4 times a day. Do the maths.
-                  </p>
-                </div>
-              </div>
 
               <ul className="space-y-3">
                 {workerBenefits.map((benefit) => (
@@ -167,33 +143,11 @@ export default function ForBothSides() {
                 <br />
                 <span className="text-brand-blue-light">fast.</span>
               </h3>
-              <p className="text-sm text-white/50 mb-6 leading-relaxed">
+              <p className="text-sm text-white/50 mb-8 leading-relaxed">
                 Need a painter tomorrow? An electrician this weekend? A developer
                 next week? Browse verified, reviewed skill profiles in your area
                 and connect directly — no agency fees, no waiting.
               </p>
-
-              {/* Free for clients callout */}
-              <div
-                className="rounded-2xl p-4 mb-7 flex items-center gap-4"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(30,202,184,0.06) 100%)",
-                  border: "1px solid rgba(37,99,235,0.25)",
-                }}
-              >
-                <div className="w-10 h-10 rounded-xl bg-brand-blue/20 flex items-center justify-center flex-shrink-0">
-                  <Building2 size={18} className="text-brand-blue-light" aria-hidden="true" />
-                </div>
-                <div>
-                  <p className="text-white font-display font-bold text-sm">
-                    Free to browse &amp; hire
-                  </p>
-                  <p className="text-white/45 text-xs mt-0.5">
-                    Clients pay nothing. Workers are pre-vetted for you.
-                  </p>
-                </div>
-              </div>
 
               <ul className="space-y-3">
                 {employerBenefits.map((benefit) => (
