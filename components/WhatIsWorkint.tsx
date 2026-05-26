@@ -2,12 +2,24 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { HardHat, Eye, MapPin } from "lucide-react";
+import { BadgeCheck, Link2, MapPin } from "lucide-react";
 
-const stats = [
-  { icon: HardHat, label: "Skilled trades covered", value: "50+" },
-  { icon: MapPin, label: "Cities at launch", value: "6" },
-  { icon: Eye, label: "Workers on waitlist", value: "2.4K" },
+const featureCards = [
+  {
+    icon: BadgeCheck,
+    title: "Capability-first profiles",
+    subtitle: "Built around what people can actually do",
+  },
+  {
+    icon: Link2,
+    title: "Temporary WorkLinks",
+    subtitle: "Focused work connections without inbox clutter",
+  },
+  {
+    icon: MapPin,
+    title: "Nearby discovery",
+    subtitle: "Find people based on location and capability",
+  },
 ];
 
 export default function WhatIsWorkint() {
@@ -44,7 +56,7 @@ export default function WhatIsWorkint() {
                 What is WorkInt?
               </span>
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6 text-white">
-                Work Intelligence —
+                Work Intelligence
                 <br />
                 for every skill
                 <br />
@@ -52,45 +64,45 @@ export default function WhatIsWorkint() {
               </h2>
               <div className="space-y-4 text-white/60 text-base sm:text-lg leading-relaxed">
                 <p>
-                  Behind every city, every business, every dream — there&apos;s
-                  someone skilled making it happen. Painters. Plumbers.
-                  Electricians. Barbers. Delivery workers. Carpenters.
+                  Behind every city, every business, and every project... there
+                  are people with real capabilities making things happen.
                 </p>
                 <p>
-                  WorkInt gives every skilled worker a profile, a platform, and
-                  a direct line to{" "}
+                  WorkInt helps people discover nearby skills, services, and
+                  collaborators based on what they can actually do.{" "}
                   <span className="text-white font-medium">
-                    real opportunities near them
+                    No resumes. No endless networking.
                   </span>{" "}
-                  — no degree, no middlemen, no black holes.
+                  Just focused work connections when they are genuinely needed.
                 </p>
                 <p className="text-brand-teal font-medium">
-                  Your skills don&apos;t need validation. They need visibility.
+                  Real capability should lead to real work, not disappear behind
+                  resumes and algorithms.
                 </p>
               </div>
             </motion.div>
           </div>
 
-          {/* Stats grid */}
+          {/* Feature cards + Mission */}
           <motion.div
             className="grid grid-cols-1 gap-4"
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
-            {stats.map(({ icon: Icon, label, value }) => (
+            {featureCards.map(({ icon: Icon, title, subtitle }) => (
               <div
-                key={label}
+                key={title}
                 className="glow-border rounded-2xl p-6 bg-surface-raised flex items-center gap-5 hover:bg-surface-overlay transition-colors duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-teal/15 flex items-center justify-center flex-shrink-0">
                   <Icon size={22} className="text-brand-teal" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="font-display font-bold text-2xl text-white">
-                    {value}
+                  <div className="font-display font-semibold text-base text-white">
+                    {title}
                   </div>
-                  <div className="text-sm text-white/50 mt-0.5">{label}</div>
+                  <div className="text-sm text-white/50 mt-0.5">{subtitle}</div>
                 </div>
               </div>
             ))}
@@ -107,14 +119,19 @@ export default function WhatIsWorkint() {
               />
               <div className="relative z-10">
                 <p className="text-xs font-semibold uppercase tracking-widest text-brand-teal mb-2">
-                  Our mission
+                  Why WorkInt exists
                 </p>
                 <p className="text-sm text-white/70 leading-relaxed">
-                  &ldquo;Every skill has value. Every person deserves a chance.
-                  A better way to connect. A better way to work.&rdquo;
+                  Most platforms optimize for networking. WorkInt optimizes for
+                  getting real work done. We believe people should connect
+                  through capability, collaborate intentionally, and move on
+                  when the work is complete.
                 </p>
                 <div className="mt-3 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" aria-hidden="true" />
+                  <span
+                    className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"
+                    aria-hidden="true"
+                  />
                   <span className="text-xs text-brand-teal font-medium">
                     WorkInt — coming soon
                   </span>

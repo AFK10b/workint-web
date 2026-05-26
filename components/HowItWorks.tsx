@@ -2,29 +2,36 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { UserPlus, Eye, Handshake } from "lucide-react";
+import { UserPlus, Compass, Send, CheckCircle } from "lucide-react";
 
 const steps = [
   {
     number: "01",
     icon: UserPlus,
-    title: "Build your profile",
+    title: "Create your capability profile",
     description:
-      "Add your skills, trade, location, and availability. Takes 2 minutes. No degree or document required.",
+      "Show what you can actually do — your services, availability, and work intent. No resume required.",
   },
   {
     number: "02",
-    icon: Eye,
-    title: "Get discovered",
+    icon: Compass,
+    title: "Discover nearby capability",
     description:
-      "Clients and employers in your area find you based on what you can actually do — not your background.",
+      "Find people around you based on skills, services, location, and availability — not followers or job titles.",
   },
   {
     number: "03",
-    icon: Handshake,
-    title: "Connect & work",
+    icon: Send,
+    title: "Send a WorkLink",
     description:
-      "Chat directly, agree on terms, and get to work. Real opportunities. Real income. No middlemen.",
+      "Create temporary work connections only when collaboration is genuinely needed.",
+  },
+  {
+    number: "04",
+    icon: CheckCircle,
+    title: "Complete the work & move on",
+    description:
+      "No endless networking. No permanent inbox clutter. Finish the collaboration and keep your network intentional.",
   },
 ];
 
@@ -39,7 +46,7 @@ export default function HowItWorks() {
       className="relative py-24 sm:py-32 px-4"
       aria-label="How WorkInt works"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           className="text-center mb-16 sm:mb-20"
@@ -55,8 +62,9 @@ export default function HowItWorks() {
             <br />
             <span className="gradient-text">Show them.</span>
           </h2>
-          <p className="mt-4 text-white/45 text-base max-w-md mx-auto">
-            Three steps and your skills are visible to everyone near you.
+          <p className="mt-4 text-white/45 text-base max-w-lg mx-auto">
+            Discover nearby people through real-world capability and create
+            focused WorkLinks only when collaboration is actually needed.
           </p>
         </motion.div>
 
@@ -64,7 +72,7 @@ export default function HowItWorks() {
         <div className="relative">
           {/* Connecting line — desktop only */}
           <div
-            className="hidden lg:block absolute top-[52px] left-[calc(16.67%+40px)] right-[calc(16.67%+40px)] h-px"
+            className="hidden lg:block absolute top-[40px] left-[calc(12.5%+36px)] right-[calc(12.5%+36px)] h-px"
             style={{
               background:
                 "linear-gradient(90deg, rgba(30,202,184,0.6) 0%, rgba(37,99,235,0.6) 100%)",
@@ -72,7 +80,7 @@ export default function HowItWorks() {
             aria-hidden="true"
           />
 
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-6 relative z-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
             {steps.map(({ number, icon: Icon, title, description }, i) => (
               <motion.div
                 key={number}
@@ -82,7 +90,7 @@ export default function HowItWorks() {
                 transition={{
                   duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
-                  delay: i * 0.15,
+                  delay: i * 0.12,
                 }}
               >
                 <div className="relative mb-6">
@@ -94,12 +102,15 @@ export default function HowItWorks() {
                       border: "1px solid rgba(30,202,184,0.4)",
                     }}
                   >
-                    <Icon size={28} className="text-brand-teal" aria-hidden="true" />
+                    <Icon size={26} className="text-brand-teal" aria-hidden="true" />
                   </div>
                   <div
                     className="absolute -top-1 -right-1 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold font-display text-white"
-                    style={{ background: "linear-gradient(135deg, #1ECAB8 0%, #2563EB 100%)" }}
-                    aria-label={`Step ${number}`}
+                    style={{
+                      background:
+                        "linear-gradient(135deg, #1ECAB8 0%, #2563EB 100%)",
+                    }}
+                    aria-label={`Step ${i + 1}`}
                   >
                     {i + 1}
                   </div>
@@ -107,8 +118,10 @@ export default function HowItWorks() {
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-brand-teal/60 mb-2">
                   Step {number}
                 </span>
-                <h3 className="font-display font-bold text-xl text-white mb-3">{title}</h3>
-                <p className="text-sm text-white/55 leading-relaxed max-w-[260px]">
+                <h3 className="font-display font-bold text-lg text-white mb-3">
+                  {title}
+                </h3>
+                <p className="text-sm text-white/55 leading-relaxed max-w-[240px]">
                   {description}
                 </p>
               </motion.div>

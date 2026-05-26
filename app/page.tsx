@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhatIsWorkint from "@/components/WhatIsWorkint";
+import WorkLinks from "@/components/WorkLinks";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import ForBothSides from "@/components/ForBothSides";
-import Pricing from "@/components/Pricing";
 import SneakPeek from "@/components/SneakPeek";
 import EarlyAccess from "@/components/EarlyAccess";
 import SocialProof from "@/components/SocialProof";
@@ -17,10 +17,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <WhatIsWorkint />
+      <WorkLinks />
       <Features />
       <HowItWorks />
       <ForBothSides />
-      <Pricing />
       <SneakPeek />
       <EarlyAccess />
       <SocialProof />

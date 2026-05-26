@@ -86,10 +86,10 @@ export default function Hero() {
           custom={0.2}
           className="max-w-2xl text-base sm:text-lg lg:text-xl text-white/60 leading-relaxed text-balance"
         >
-          WorkInt — Work Intelligence. Whether you lay bricks, cut hair, wire
-          buildings, or write code — your skills deserve to be seen. We
-          connect every skilled worker with real opportunities near them.
-          No degree required.
+          WorkInt helps people discover nearby skills, services, and
+          collaborators based on real-world capability, not resumes, followers,
+          or degrees. Create focused work connections only when work actually
+          needs to happen.
         </motion.p>
 
         {/* CTAs */}
@@ -104,13 +104,13 @@ export default function Hero() {
             href="#early-access"
             className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-display font-semibold text-base bg-brand-teal hover:bg-brand-teal-light text-surface-base transition-all duration-200 hover:shadow-xl hover:shadow-brand-teal/30 hover:-translate-y-0.5 active:translate-y-0"
           >
-            Notify Me — I&apos;m in
+            Join Early Access
           </a>
           <a
-            href="#what-is-workint"
+            href="#worklinks"
             className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-display font-semibold text-base glow-border bg-surface-raised text-white/80 hover:text-white transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
           >
-            Learn more
+            See How WorkLinks Work
           </a>
         </motion.div>
 
@@ -128,7 +128,7 @@ export default function Hero() {
             backgroundClip: "text",
           }}
         >
-          WorkInt — where skills get seen.
+          A capability-based network for temporary work collaboration.
         </motion.p>
 
         {/* Countdown */}
@@ -155,7 +155,7 @@ export default function Hero() {
         >
           Join{" "}
           <span className="text-brand-teal font-semibold">2,400+</span>{" "}
-          workers already on the waitlist
+          people building the future of work
         </motion.p>
       </div>
 
