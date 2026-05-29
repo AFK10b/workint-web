@@ -41,8 +41,8 @@ const socials = [
   {
     icon: Mail,
     label: "Email",
-    handle: "hello@workint.in",
-    href: "mailto:hello@workint.in",
+    handle: "connect@workint.in",
+    href: "mailto:connect@workint.in",
     gradient: "from-brand-teal to-brand-blue",
     border: "rgba(30,202,184,0.35)",
     glow: "rgba(30,202,184,0.08)",

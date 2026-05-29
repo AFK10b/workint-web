@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "How can I become a beta tester?",
-    a: "Join the waitlist above. We're selecting beta users based on sign-up order. If you're a business or employer who wants to be a beta partner, email us at hello@workint.in with 'Beta Partner' in the subject.",
+    a: "Join the waitlist above. We're selecting beta users based on sign-up order. If you're a business or employer who wants to be a beta partner, email us at connect@workint.in with 'Beta Partner' in the subject.",
   },
 ];
 
@@ -144,7 +144,7 @@ export default function FAQ() {
         >
           More questions?{" "}
           <a
-            href="mailto:hello@workint.in"
+            href="mailto:connect@workint.in"
             className="text-brand-teal hover:text-brand-teal-light transition-colors duration-200 underline underline-offset-2"
           >
             Email us

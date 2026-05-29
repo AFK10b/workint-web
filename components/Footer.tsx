@@ -10,7 +10,7 @@ const socials = [
   },
   { icon: Linkedin, href: "#", label: "Connect with WorkInt on LinkedIn" },
   { icon: Twitter, href: "#", label: "Follow WorkInt on X" },
-  { icon: Mail, href: "mailto:hello@workint.in", label: "Email WorkInt" },
+  { icon: Mail, href: "mailto:connect@workint.in", label: "Email WorkInt" },
 ];
 
 const links = [
@@ -83,10 +83,10 @@ export default function Footer() {
             </h3>
             <div className="space-y-3">
               <a
-                href="mailto:hello@workint.in"
+                href="mailto:connect@workint.in"
                 className="block text-sm text-white/45 hover:text-white transition-colors duration-200"
               >
-                hello@workint.in
+                connect@workint.in
               </a>
               <a
                 href="https://www.instagram.com/workint_/"
