@@ -9,6 +9,7 @@ import SneakPeek from "@/components/SneakPeek";
 import EarlyAccess from "@/components/EarlyAccess";
 import SocialProof from "@/components/SocialProof";
 import FAQ from "@/components/FAQ";
+import VisitorCount from "@/components/VisitorCount";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <EarlyAccess />
       <SocialProof />
       <FAQ />
+      <VisitorCount />
       <Footer />
     </main>
   );
