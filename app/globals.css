@@ -75,6 +75,18 @@ body {
   z-index: 1;
 }
 
+/* Legal page body — restore list bullets removed by preflight */
+.legal-body ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.legal-body ul li::marker {
+  color: #1ecab8;
+}
+
 /* Focus ring */
 *:focus-visible {
   outline: 2px solid #7c3aed;

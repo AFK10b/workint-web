@@ -111,6 +111,20 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-surface-border/40 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/25">
           <p>© {year} WorkInt. All rights reserved.</p>
+          <div className="flex items-center gap-5">
+            <a
+              href="/terms"
+              className="hover:text-white/60 transition-colors duration-200"
+            >
+              Terms of Service
+            </a>
+            <a
+              href="/privacy"
+              className="hover:text-white/60 transition-colors duration-200"
+            >
+              Privacy Policy
+            </a>
+          </div>
           <p className="flex items-center gap-1.5">
             Made with{" "}
             <Heart size={11} className="text-brand-teal fill-brand-teal" aria-hidden="true" />{" "}
