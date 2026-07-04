@@ -7,7 +7,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "When are you launching?",
-    a: "WorkInt launches in June 2026. We're currently in closed beta, hand-picking early users from the waitlist. Sign up today to be among the first to get access — and lock in lifetime premium free.",
+    a: "WorkInt launches on 1 August 2026. We're currently in closed beta, hand-picking early users from the waitlist. Sign up today to be among the first to get access — and lock in lifetime premium free.",
   },
   {
     q: "Is WorkInt only for blue-collar and trade workers?",

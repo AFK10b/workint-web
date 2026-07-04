@@ -61,7 +61,7 @@ export default function Hero() {
         <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glow-border bg-surface-raised text-sm font-medium text-brand-teal">
             <Sparkles size={14} className="animate-pulse-slow" aria-hidden="true" />
-            <span>Launching Soon — June 2026</span>
+            <span>Launching Soon — August 2026</span>
           </div>
         </motion.div>
 
