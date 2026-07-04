@@ -49,20 +49,22 @@ export default function HowItWorks() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-16 sm:mb-20"
+          className="mb-16 sm:mb-20"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-teal mb-4">
-            How it works
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+          <div className="flex items-center gap-4 mb-8">
+            <span className="mono-label">[04]</span>
+            <span className="mono-label text-white/40">How it works</span>
+            <span className="flex-1 h-px bg-gradient-to-r from-brand-teal/40 to-transparent" aria-hidden="true" />
+          </div>
+          <h2 className="font-display font-bold uppercase text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.95] tracking-tight">
             Don&apos;t tell them.
             <br />
-            <span className="gradient-text">Show them.</span>
+            <span className="text-outline">Show them.</span>
           </h2>
-          <p className="mt-4 text-white/45 text-base max-w-lg mx-auto">
+          <p className="mt-6 text-white/45 text-base max-w-xl">
             Discover nearby people through real-world capability and create
             focused WorkLinks only when collaboration is actually needed.
           </p>

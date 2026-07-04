@@ -34,18 +34,20 @@ export default function ForBothSides() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-14 sm:mb-16"
+          className="mb-14 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-teal mb-4">
-            Built for both sides
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+          <div className="flex items-center gap-4 mb-8">
+            <span className="mono-label">[05]</span>
+            <span className="mono-label text-white/40">Built for both sides</span>
+            <span className="flex-1 h-px bg-gradient-to-r from-brand-teal/40 to-transparent" aria-hidden="true" />
+          </div>
+          <h2 className="font-display font-bold uppercase text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.95] tracking-tight">
             Whether you work
             <br />
-            <span className="gradient-text">or need the work done.</span>
+            <span className="text-outline">or need the work done.</span>
           </h2>
         </motion.div>
 

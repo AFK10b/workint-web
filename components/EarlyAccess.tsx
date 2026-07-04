@@ -93,13 +93,11 @@ export default function EarlyAccess() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-teal mb-4">
-            Early access
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-4">
+          <span className="mono-label inline-block mb-5">[07] — Early access</span>
+          <h2 className="font-display font-bold uppercase text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.95] tracking-tight mb-4">
             Be among the first
             <br />
-            <span className="gradient-text">1000 users.</span>
+            <span className="text-outline">1000 users.</span>
           </h2>
           <p className="text-base sm:text-lg text-white/55 mb-10 leading-relaxed">
             Join the waitlist today and get{" "}

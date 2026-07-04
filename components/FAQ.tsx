@@ -106,18 +106,20 @@ export default function FAQ() {
     >
       <div className="max-w-2xl mx-auto">
         <motion.div
-          className="text-center mb-12"
+          className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-teal mb-4">
-            FAQ
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-white leading-tight">
+          <div className="flex items-center gap-4 mb-8">
+            <span className="mono-label">[09]</span>
+            <span className="mono-label text-white/40">FAQ</span>
+            <span className="flex-1 h-px bg-gradient-to-r from-brand-teal/40 to-transparent" aria-hidden="true" />
+          </div>
+          <h2 className="font-display font-bold uppercase text-4xl sm:text-5xl text-white leading-[0.95] tracking-tight">
             Straight answers.
             <br />
-            <span className="gradient-text">No fluff.</span>
+            <span className="text-outline">No fluff.</span>
           </h2>
         </motion.div>
 

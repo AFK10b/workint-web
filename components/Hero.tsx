@@ -1,178 +1,211 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import Countdown from "./Countdown";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 32 },
   show: (delay = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1], delay },
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1], delay },
   }),
 };
+
+const trades = [
+  "Electricians",
+  "Painters",
+  "Barbers",
+  "Developers",
+  "Carpenters",
+  "Plumbers",
+  "Designers",
+  "Mechanics",
+  "Welders",
+  "Photographers",
+];
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 pb-24 overflow-hidden noise-overlay"
+      className="relative min-h-screen flex flex-col justify-center px-4 pt-24 pb-0 overflow-hidden"
       aria-label="Hero section"
     >
-      {/* Background glows */}
+      {/* Background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30,202,184,0.18) 0%, transparent 70%)",
-        }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(30,202,184,0.06) 0%, transparent 70%)",
-        }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(37,99,235,0.07) 0%, transparent 70%)",
+            "radial-gradient(ellipse 70% 55% at 75% 20%, rgba(30,202,184,0.1) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 15% 80%, rgba(37,99,235,0.08) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />
 
-      {/* Floating grid pattern */}
+      {/* Grid pattern */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.035] pointer-events-none"
         style={{
           backgroundImage:
             "linear-gradient(rgba(30,202,184,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(30,202,184,0.8) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
+          backgroundSize: "72px 72px",
         }}
         aria-hidden="true"
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-6 sm:gap-8">
-        {/* Launching soon badge */}
-        <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glow-border bg-surface-raised text-sm font-medium text-brand-teal">
-            <Sparkles size={14} className="animate-pulse-slow" aria-hidden="true" />
-            <span>Launching Soon — August 2026</span>
-          </div>
+      <div className="relative z-10 max-w-6xl mx-auto w-full flex-1 flex flex-col justify-center">
+        {/* Technical meta row */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0}
+          className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-10"
+        >
+          <span className="mono-label">[ Est. 2026 ]</span>
+          <span className="mono-label text-white/35">Skill network — India</span>
+          <span className="hidden sm:block flex-1 h-px bg-white/10" aria-hidden="true" />
+          <span className="mono-label text-white/35 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" aria-hidden="true" />
+            Launching 01 . 08 . 2026
+          </span>
         </motion.div>
 
         {/* Headline */}
-        <motion.h1
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={0.1}
-          className="font-display font-bold text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight text-balance"
-        >
-          Talent is everywhere.
-          <br />
-          <span className="gradient-text">Opportunities are not.</span>
-        </motion.h1>
+        <h1 className="font-display font-bold uppercase tracking-tight leading-[0.92] mb-10">
+          <motion.span
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={0.1}
+            className="block text-[13vw] sm:text-7xl lg:text-8xl xl:text-[7rem] text-white"
+          >
+            Talent is
+          </motion.span>
+          <motion.span
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={0.18}
+            className="block text-[13vw] sm:text-7xl lg:text-8xl xl:text-[7rem] text-white"
+          >
+            everywhere.
+          </motion.span>
+          <motion.span
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={0.26}
+            className="block text-[13vw] sm:text-7xl lg:text-8xl xl:text-[7rem] text-outline"
+          >
+            Opportunities
+          </motion.span>
+          <motion.span
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={0.34}
+            className="block text-[13vw] sm:text-7xl lg:text-8xl xl:text-[7rem] text-outline"
+          >
+            are not.
+          </motion.span>
+        </h1>
 
-        {/* Sub-headline */}
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={0.2}
-          className="max-w-2xl text-base sm:text-lg lg:text-xl text-white/60 leading-relaxed text-balance"
-        >
-          WorkInt helps people discover nearby skills, services, and
-          collaborators based on real-world capability, not resumes, followers,
-          or degrees. Create focused work connections only when work actually
-          needs to happen.
-        </motion.p>
+        {/* Sub + CTAs row */}
+        <div className="grid lg:grid-cols-2 gap-10 items-end mb-14">
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={0.42}
+            className="text-base sm:text-lg text-white/55 leading-relaxed max-w-lg"
+          >
+            WorkInt helps people discover nearby skills, services, and
+            collaborators based on real-world capability — not resumes,
+            followers, or degrees. Focused work connections, only when work
+            actually needs to happen.
+          </motion.p>
 
-        {/* CTAs */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={0.5}
+            className="flex flex-col sm:flex-row lg:justify-end items-stretch sm:items-center gap-3"
+          >
+            <a
+              href="#early-access"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 font-display font-semibold text-sm uppercase tracking-wider bg-brand-teal text-surface-base hover:bg-brand-teal-light transition-all duration-200"
+            >
+              Join Early Access
+              <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" aria-hidden="true" />
+            </a>
+            <a
+              href="#worklinks"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 font-display font-semibold text-sm uppercase tracking-wider border border-white/20 text-white/80 hover:border-brand-teal hover:text-brand-teal transition-all duration-200"
+            >
+              How WorkLinks Work
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Countdown row */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          custom={0.3}
-          className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto"
+          custom={0.58}
+          className="flex flex-col sm:flex-row sm:items-center gap-5 border-t border-white/10 pt-8 pb-16"
         >
-          <a
-            href="#early-access"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-display font-semibold text-base bg-brand-teal hover:bg-brand-teal-light text-surface-base transition-all duration-200 hover:shadow-xl hover:shadow-brand-teal/30 hover:-translate-y-0.5 active:translate-y-0"
-          >
-            Join Early Access
-          </a>
-          <a
-            href="#worklinks"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-display font-semibold text-base glow-border bg-surface-raised text-white/80 hover:text-white transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
-          >
-            See How WorkLinks Work
-          </a>
-        </motion.div>
-
-        {/* Brand line */}
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={0.35}
-          className="text-sm font-medium tracking-wide"
-          style={{
-            background: "linear-gradient(135deg, #1ECAB8 0%, #2563EB 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          A capability-based network for temporary work collaboration.
-        </motion.p>
-
-        {/* Countdown */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={0.4}
-          className="flex flex-col items-center gap-3"
-        >
-          <span className="text-xs text-white/30 uppercase tracking-widest font-medium">
-            Launching in
-          </span>
+          <span className="mono-label text-white/35">T-minus</span>
           <Countdown />
+          <span className="hidden lg:block flex-1" aria-hidden="true" />
+          <p className="text-sm text-white/35">
+            <span className="text-brand-teal font-semibold">2,400+</span>{" "}
+            people building the future of work
+          </p>
         </motion.div>
-
-        {/* Social proof nudge */}
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={0.5}
-          className="text-sm text-white/35"
-        >
-          Join{" "}
-          <span className="text-brand-teal font-semibold">2,400+</span>{" "}
-          people building the future of work
-        </motion.p>
       </div>
+
+      {/* Skills marquee */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.8 }}
+        className="relative z-10 -mx-4 border-y border-white/10 bg-surface-raised/40 py-4 overflow-hidden"
+        aria-hidden="true"
+      >
+        <div className="marquee-track">
+          {[...trades, ...trades].map((trade, i) => (
+            <span
+              key={`${trade}-${i}`}
+              className="flex items-center gap-6 pr-6 font-display font-bold uppercase text-lg sm:text-xl whitespace-nowrap"
+            >
+              <span className={i % 2 === 0 ? "text-white/70" : "text-outline-white"}>
+                {trade}
+              </span>
+              <span className="text-brand-teal text-sm">✦</span>
+            </span>
+          ))}
+        </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/25"
+        className="absolute bottom-24 right-8 hidden xl:flex flex-col items-center gap-3 text-white/25"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
+        transition={{ delay: 1.4, duration: 0.8 }}
         aria-hidden="true"
       >
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
+        <span className="mono-label text-white/25" style={{ writingMode: "vertical-rl" }}>
+          Scroll
+        </span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
         >
-          <ArrowDown size={16} />
+          <ArrowDown size={14} />
         </motion.div>
       </motion.div>
     </section>

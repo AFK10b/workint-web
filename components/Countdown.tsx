@@ -57,22 +57,20 @@ export default function Countdown() {
   if (!mounted) return null;
 
   return (
-    <div className="flex items-center gap-3 sm:gap-4" role="timer" aria-live="polite" aria-label="Countdown to launch">
+    <div className="flex items-center gap-3 sm:gap-5" role="timer" aria-live="polite" aria-label="Countdown to launch">
       {units.map(({ label, value }, i) => (
-        <div key={label} className="flex items-center gap-3 sm:gap-4">
-          <div className="flex flex-col items-center">
-            <div className="glow-border rounded-xl px-3 py-2 sm:px-4 sm:py-3 min-w-[52px] sm:min-w-[64px] text-center bg-surface-raised">
-              <span className="font-display font-bold text-xl sm:text-2xl lg:text-3xl text-white tabular-nums">
-                {pad(value)}
-              </span>
-            </div>
-            <span className="mt-1.5 text-[10px] sm:text-xs text-white/40 font-medium uppercase tracking-widest">
+        <div key={label} className="flex items-center gap-3 sm:gap-5">
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-mono font-bold text-2xl sm:text-3xl text-white tabular-nums">
+              {pad(value)}
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-brand-teal">
               {label}
             </span>
           </div>
           {i < 3 && (
-            <span className="font-display font-bold text-xl sm:text-2xl text-brand-teal/40 mb-4">
-              :
+            <span className="font-mono text-lg text-white/20" aria-hidden="true">
+              /
             </span>
           )}
         </div>

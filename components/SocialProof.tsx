@@ -69,13 +69,11 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-teal mb-4">
-            Stay connected
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mb-4">
+          <span className="mono-label inline-block mb-5">[08] — Stay connected</span>
+          <h2 className="font-display font-bold uppercase text-4xl sm:text-5xl text-white leading-[0.95] tracking-tight mb-4">
             Follow the build.
             <br />
-            <span className="gradient-text">Join the community.</span>
+            <span className="text-outline">Join the community.</span>
           </h2>
           <p className="text-white/50 text-base leading-relaxed max-w-md mx-auto">
             We&apos;re building WorkInt in the open. Follow along for sneak

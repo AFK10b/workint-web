@@ -43,7 +43,19 @@ export default function WhatIsWorkint() {
         aria-hidden="true"
       />
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
+        {/* Index rule */}
+        <motion.div
+          className="flex items-center gap-4 mb-12"
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="mono-label">[01]</span>
+          <span className="mono-label text-white/40">What is WorkInt?</span>
+          <span className="flex-1 h-px bg-gradient-to-r from-brand-teal/40 to-transparent" aria-hidden="true" />
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text */}
           <div>
@@ -52,15 +64,12 @@ export default function WhatIsWorkint() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-teal mb-4">
-                What is WorkInt?
-              </span>
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6 text-white">
+              <h2 className="font-display font-bold uppercase text-4xl sm:text-5xl leading-[0.95] tracking-tight mb-6 text-white">
                 Work Intelligence
                 <br />
                 for every skill
                 <br />
-                <span className="gradient-text">that matters.</span>
+                <span className="text-outline">that matters.</span>
               </h2>
               <div className="space-y-4 text-white/60 text-base sm:text-lg leading-relaxed">
                 <p>

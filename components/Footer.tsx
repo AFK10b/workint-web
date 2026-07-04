@@ -26,8 +26,16 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-surface-border/50 bg-surface-raised/30 px-4 pt-12 pb-8">
+    <footer className="relative border-t border-surface-border/50 bg-surface-raised/30 px-4 pt-12 pb-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
+        {/* Giant wordmark */}
+        <div className="mb-14 select-none" aria-hidden="true">
+          <span className="block font-display font-bold uppercase leading-none tracking-tight text-[18vw] lg:text-[11rem] whitespace-nowrap">
+            <span className="text-outline-white">Work</span>
+            <span className="text-outline">Int</span>
+          </span>
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div className="lg:col-span-1">

@@ -36,15 +36,16 @@ export default function Navbar() {
         {/* Nav links — hidden on mobile */}
         <div className="hidden md:flex items-center gap-8">
           {[
-            ["Features", "#features"],
-            ["How it works", "#how-it-works"],
-            ["FAQ", "#faq"],
-          ].map(([label, href]) => (
+            ["01", "Features", "#features"],
+            ["02", "How it works", "#how-it-works"],
+            ["03", "FAQ", "#faq"],
+          ].map(([num, label, href]) => (
             <a
               key={label}
               href={href}
-              className="text-sm text-white/60 hover:text-white transition-colors duration-200"
+              className="group font-mono text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors duration-200"
             >
+              <span className="text-brand-teal/60 group-hover:text-brand-teal mr-1.5">{num}.</span>
               {label}
             </a>
           ))}
@@ -63,7 +64,7 @@ export default function Navbar() {
           </a>
           <a
             href="#early-access"
-            className="hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-brand-teal hover:bg-brand-teal-light text-surface-base font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-brand-teal/25"
+            className="hidden sm:inline-flex items-center px-4 py-2 text-xs font-display font-semibold uppercase tracking-wider bg-brand-teal hover:bg-brand-teal-light text-surface-base transition-all duration-200 hover:shadow-lg hover:shadow-brand-teal/25"
           >
             Get early access
           </a>

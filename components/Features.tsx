@@ -71,53 +71,60 @@ export default function Features() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-14 sm:mb-20"
+          className="mb-14 sm:mb-20"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-teal mb-4">
-            Why WorkInt
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+          <div className="flex items-center gap-4 mb-8">
+            <span className="mono-label">[03]</span>
+            <span className="mono-label text-white/40">Why WorkInt</span>
+            <span className="flex-1 h-px bg-gradient-to-r from-brand-teal/40 to-transparent" aria-hidden="true" />
+          </div>
+          <h2 className="font-display font-bold uppercase text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.95] tracking-tight">
             Small capabilities.
             <br />
-            <span className="gradient-text">Big impact.</span>
+            <span className="text-outline">Big impact.</span>
           </h2>
-          <p className="mt-4 text-white/45 text-base max-w-lg mx-auto">
+          <p className="mt-6 text-white/45 text-base max-w-xl">
             WorkInt helps people discover, connect, and collaborate through
             real-world capability.
           </p>
         </motion.div>
 
-        {/* Cards */}
+        {/* Cards — flat editorial grid with 1px dividers */}
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "show" : "hidden"}
         >
-          {features.map(({ icon: Icon, title, description, gradient, iconBg, iconColor }) => (
+          {features.map(({ icon: Icon, title, description }, i) => (
             <motion.div
               key={title}
               variants={cardVariants}
-              className="group relative rounded-2xl p-6 glow-border bg-surface-raised cursor-default hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-teal/10 overflow-hidden"
+              className="group relative p-7 bg-surface-base cursor-default overflow-hidden transition-colors duration-300"
             >
+              {/* Hover fill sweep */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none`}
+                className="absolute inset-0 bg-brand-teal translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out pointer-events-none"
                 aria-hidden="true"
               />
-              <div className="relative z-10">
-                <div
-                  className={`w-11 h-11 rounded-xl ${iconBg} flex items-center justify-center mb-5`}
-                  aria-hidden="true"
-                >
-                  <Icon size={20} className={iconColor} />
+              <div className="relative z-10 flex flex-col h-full min-h-[240px]">
+                <div className="flex items-start justify-between mb-10">
+                  <span className="font-mono text-xs text-brand-teal group-hover:text-surface-base/70 transition-colors duration-300">
+                    0{i + 1}
+                  </span>
+                  <Icon
+                    size={20}
+                    className="text-white/40 group-hover:text-surface-base transition-colors duration-300"
+                    aria-hidden="true"
+                  />
                 </div>
-                <h3 className="font-display font-semibold text-base text-white mb-2">
+                <h3 className="font-display font-bold uppercase text-lg leading-tight text-white group-hover:text-surface-base transition-colors duration-300 mb-3 mt-auto">
                   {title}
                 </h3>
-                <p className="text-sm text-white/55 leading-relaxed">
+                <p className="text-sm text-white/50 group-hover:text-surface-base/80 leading-relaxed transition-colors duration-300">
                   {description}
                 </p>
               </div>
