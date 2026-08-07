@@ -20,6 +20,7 @@ const links = [
   { label: "Early Access", href: "#early-access" },
   { label: "Terms of Service", href: "/terms" },
   { label: "Privacy Policy", href: "/privacy" },
+  { label: "Delete Account", href: "/delete-account" },
 ];
 
 export default function Footer() {
