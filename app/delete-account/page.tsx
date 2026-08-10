@@ -290,6 +290,12 @@ export default function DeleteAccountPage() {
             <a href="/privacy" className="hover:text-brand-teal transition-colors duration-200">
               Privacy
             </a>
+            <a
+              href="/child-safety"
+              className="hover:text-brand-teal transition-colors duration-200"
+            >
+              Child Safety
+            </a>
           </div>
         </div>
       </footer>

@@ -21,6 +21,7 @@ const links = [
   { label: "Terms of Service", href: "/terms" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Delete Account", href: "/delete-account" },
+  { label: "Child Safety", href: "/child-safety" },
 ];
 
 export default function Footer() {
