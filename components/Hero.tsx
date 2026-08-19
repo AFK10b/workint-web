@@ -67,7 +67,7 @@ export default function Hero() {
           <span className="hidden sm:block flex-1 h-px bg-white/10" aria-hidden="true" />
           <span className="mono-label text-white/35 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" aria-hidden="true" />
-            Launching 01 . 08 . 2026
+            Launching 01 . 01 . 2027
           </span>
         </motion.div>
 
